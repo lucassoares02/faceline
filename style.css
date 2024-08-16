@@ -97,10 +97,10 @@ button {
     padding-bottom: 20px;
     padding-right: 40px;
     padding-left: 40px;
-    border: 2px solid green;
+    border: 2px solid #00d455;
     background-color: transparent;
     border-radius: 30px;
-    color: green;
+    color: #00d455;
 }
 
 .container {
@@ -376,7 +376,7 @@ button {
     background-color: white;
     border-radius: 10px;
     flex: 0 0 auto;
-    width: 300px;
+    width: 250px;
     /* display: flex; */
     flex-direction: column;
     height: 690px;
@@ -439,7 +439,7 @@ button {
     color: gray;
     font-size: 12px;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 15px;
 }
 
@@ -523,4 +523,34 @@ button {
     align-items: center;
     justify-content: space-evenly;
     padding-bottom: 2rem;
+}
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icon-button{
+    color: white;
+    font-size: 30px;
+}
+
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
 }

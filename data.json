@@ -1,12 +1,12 @@
 {
   "titulo_pagina": "Máscara Modeladora®",
-  "titulo_header_1": "Descubra o segredo para uma pele mais linda e radiante",
+  "titulo_header_1": "Descubra o segredo para uma pele mais linda, hidratada e radiante",
   "titulo_header_2": "",
-  "descricao": "A Máscara Modeladora de Linha Facial® é perfeita para quem busca manter sua pele sempre linda. Fabricada com os melhores materiais, nossa máscara proporciona excelentes resultados.",
-  "descricao1": "Com sua fórmula, a máscara proporciona um efeito lifting, ajustando os contornos faciais e reduzindo a aparência de linhas de expressão.",
+  "descricao": "A Máscara Modeladora de Linha Facial® é perfeita para quem busca manter sua pele sempre linda. Fabricada com OPP um material confortável e lavável, nossa máscara pode ser usada de dia e de noite e proporciona excelentes resultados.",
+  "descricao1": "Com seu formato, a máscara proporciona uma pressão no pontos da sua face, estimulando a produção de colágeno e causando um efeito lifting, ajustando os contornos faciais e reduzindo a aparência de linhas de expressão.",
   "descricao2": "Conheça alguns motivos que encantam nossos clientes quando eles utilizam a nossa máscara.",
   "descricao21": "Enriquecida com componentes que penetram profundamente na pele, garante uma hidratação intensa e duradoura. Diga adeus à pele seca e sem vida!",
-  "descricao3": "Aplicação utilização é super simples, perfeita para o seu dia ou noite. Apenas coloque a máscara, relaxe e aproveite os benefícios!",
+  "descricao3": "A utilização é super simples, perfeita para qualquer momento, seja ele de dia ou durante a noite. Apenas coloque a máscara, relaxe e aproveite os benefícios! Sem necessidades de massagens ou pressões manuais.",
   "descricao4": "Saiba como utilizar a sua máscara. Siga os passos abaixo para utilizar corretamente a Máscara Modeladora.",
   "beneficio1": "Efeito Lifting",
   "beneficio2": "Hidratação Profunda",
@@ -29,17 +29,17 @@
   "subtitulo_card2": "A máscara possui ajustes capazes de facilitar e ajustar-se ao seu rosto.",
   "subtitulo_card3": "Rápida e simples de usar, perfeita para cada momento.",
   
-  "video": "https://www.youtube.com/embed/ZkgLzcCDiQ4",
+  "video": "https://www.youtube.com/embed/DoKsRKVwSk4",
 
   "titulo_card4": "Desenrole",
   "titulo_card5": "Puxe e encaixe",
   "titulo_card6": "Ajuste na cabeça",
   "titulo_card7": "Ajuste no queixo",
 
-  "subtitulo_card4": "Desenrole a máscara e posicione ela no rosto.",
-  "subtitulo_card5": "Puxe as alças e encaixe atrás das orelhas.",
-  "subtitulo_card6": "Prenda com a alça na cabeça para que ela fique firme.",
-  "subtitulo_card7": "Ajuste no rosto para que fique confortável e seguro.",
+  "subtitulo_card4": "Desenrole a máscara horizontalmente utilizando as duas mãos a frente do seu rosto,e em seguida posicione ela no rosto.",
+  "subtitulo_card5": "Puxe as alças e encaixe atrás das orelhas. Garantindo que a boca e o nariz e as orelhas estejam nos encaixes adequados.",
+  "subtitulo_card6": "Posicione com a alça a máscara na cabeça, mantenha a pressão adequada garantindo o conforto mas garanta que ela fique firme na cabeça.",
+  "subtitulo_card7": "Mantenha o rosto na posição adequada e verifique se precisa de ajuste, caso necessário o ajuste, repita os passos anteriores.",
 
   "justificativa11": "Porque devo ter a minha",
   "justificativa12": "Máscara",
@@ -48,7 +48,7 @@
 
   "justificativa13": "Veja o que tem a dizer",
   "justificativa14": "quem usa.",
-  "descricao7": "Alguns depoimentos dos nossos clientes.",
+  "descricao7": "Conheça alguns depoimentos dos nossos clientes que estão utilizando a nossa máscara.",
 
   "justificativa15": "Escolha sua",
   "justificativa16": "Opção",
@@ -68,23 +68,23 @@
   "benefits2_offer1": "Praticidade",
   "benefits3_offer1": "Maior Desconto %",
   "portion_offer1": "4x",
-  "value_offer1": "R$34",
-  "value_offer1_cents": ",99",
+  "value_offer1": "R$37",
+  "value_offer1_cents": ",65",
   "incash_offer1": "ou R$139,99 no PIX",
 
   "subtitle_offer2": "1 MÁSCARA + ADESIVOS",
   "benefits1_offer2": "1 Máscara Modeladora®",
   "benefits2_offer2": "1 Kit de Adesivos",
   "portion_offer2": "4x",
-  "value_offer2": "R$35",
-  "value_offer2_cents": ",74",
+  "value_offer2": "R$36",
+  "value_offer2_cents": ",53",
   "incash_offer2": "ou R$135,83 no PIX",
   
   "subtitle_offer3": "1 MÁSCARA",
   "benefits1_offer3": "1 Máscara Modeladora®",
-  "benefits2_offer3": "Economia",
+  "benefits2_offer3": "Maior economia",
   "portion_offer3": "4x",
   "value_offer3": "R$22",
-  "value_offer3_cents": ",50",
+  "value_offer3_cents": ",99",
   "incash_offer3": "ou R$85,49 no PIX"
 }
