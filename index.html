@@ -43,7 +43,7 @@
           <a href="#id-offer">
           <button
           href="#id-offer"
-          onclick="enviarDados([{button1: 1}])">
+          onclick="atualizarDados({data: {button1: 1}})">
           <i class="fas fa-cart-shopping"></i>
           CARRINHO
         </button>
@@ -130,7 +130,7 @@
           <div class="space"></div>
           <div class="row max-width center-center">
             <a href="#id-offer">
-              <button class="button-action" onclick="enviarDados([{button2: 1}])">
+              <button class="button-action" onclick="atualizarDados({data: {button2: 1}})">
                 <i class="fas fa-cart-shopping"></i>
                 COMPRAR AGORA
               </button>
@@ -219,7 +219,7 @@
       <div class="space"></div>
       <div class="row max-width center-center">
         <a href="#id-offer">
-          <button onclick="enviarDados([{button3: 1}])" class="button-action">COMPRAR AGORA</button>
+          <button onclick="atualizarDados({data: {button3: 1}})" class="button-action">COMPRAR AGORA</button>
         </a>
       </div>
     </div>
@@ -373,7 +373,7 @@
           <div class="space"></div>
           <div class="row max-width center-center">
             <a href="#id-offer">
-              <button onclick="enviarDados([{button4: 1}])" class="button-action">
+              <button onclick="atualizarDados({data: {button4: 1}})" class="button-action">
                 <i class="fas fa-cart-shopping"></i>
                 COMPRAR AGORA
               </button>
@@ -423,7 +423,7 @@
           <div class="space"></div>
           <div class="row max-width center-center">
             <a href="#id-offer">
-              <button onclick="enviarDados([{button5: 1}])" class="button-action">
+              <button onclick="atualizarDados({data: {button5: 1}})" class="button-action">
                 <i class="fas fa-cart-shopping"></i>
                 COMPRAR AGORA
               </button>
@@ -532,7 +532,7 @@
       <div class="space"></div>
       <div class="row max-width center-center">
         <a href="#id-offer">
-          <button onclick="enviarDados([{button6: 1}])" class="button-action">COMPRAR AGORA</button>
+          <button onclick="atualizarDados({data: {buttona6: 1}})" class="button-action">COMPRAR AGORA</button>
         </a>
       </div>
     </div>
@@ -573,7 +573,7 @@
         <div class="space"></div>
         <div class="row max-width center-center">
           <a href="#id-offer">
-            <button onclick="enviarDados([{button7: 1}])" class="button-action">COMPRAR AGORA</button>
+            <button onclick="atualizarDados({data: {button7: 1}})" class="button-action">COMPRAR AGORA</button>
           </a>
         </div>
 
@@ -1149,7 +1149,7 @@
             <div class="space"></div>
             <div class="row max-width center-center">
               <a href="#id-offer">
-                <button onclick="enviarDados([{button8: 1}])" class="button-action">
+                <button onclick="atualizarDados({data: {button8: 1}})" class="button-action">
                   <i class="fas fa-cart-shopping"></i>
                   COMPRAR AGORA
                 </button>
@@ -1300,6 +1300,7 @@
   </div>
 </body>
 <script>
+
   const accordionHeaders = document.querySelectorAll('.accordion-header');
   accordionHeaders.forEach(header => {
     header.addEventListener('click', () => {
@@ -1319,7 +1320,6 @@
     });
   });
 
-  // Função para gerar um token aleatório
   function gerarToken() {
             return Math.random().toString(36).substr(2) + Math.random().toString(36).substr(2);
         }
@@ -1342,6 +1342,7 @@
                 token = gerarToken();
                 salvarTokenNosCookies(token);
                 console.log("Novo token gerado e salvo nos cookies:", token);
+                    salvarDados([{client: token}]);
             } else {
                 console.log("Token existente encontrado nos cookies:", token);
             }
@@ -1350,29 +1351,33 @@
         // Chama a função ao carregar a página
         window.onload = verificarOuGerarToken;
 
-  function enviarDados(data) {
+  async function atualizarDados(data) {
 
-            data[0]["client"] = obterTokenDosCookies();
-            // Objeto com os dados a serem enviados
-            // const data = {
-            //     client: "Cliente Exemplo",
-            //     datetime: new Date().toISOString(),
-            //     button1: 1,
-            //     button2: false,
-            //     button3: 1,
-            //     button4: false,
-            //     button5: 1,
-            //     button6: false,
-            //     button7: 1,
-            //     button8: false,
-            //     button_whatsApp: 1,
-            //     button_Oferta1: false,
-            //     button_Oferta2: 1,
-            //     button_Oferta3: false,
-            //     percentage: 75.50
-            // };
+            data["client"] = await obterTokenDosCookies();
 
-            // Enviar a requisição POST
+            fetch("http://localhost:3001/faceline-user-update", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Erro na requisição");
+                }
+            })
+            .then(responseData => {
+                console.log("Dados enviados com sucesso:", responseData);
+            })
+            .catch(error => {
+                console.error("Erro:", error);
+            });
+        }
+  function salvarDados(data) {
+
             fetch("https://seller-backend.onrender.com/faceline-user", {
                 method: "POST",
                 headers: {
@@ -1410,20 +1415,19 @@
 
             // Verificar se o usuário rolou 25% ou mais
             if (scrollPercent >= 25 && !enviado25) {
-              enviarDados([{percentage: scrollPercent}]);
+              atualizarDados([{percentage: scrollPercent}]);
                 // window.removeEventListener("scroll", monitorarRolagem);
                 enviado25 = true;
               } else if(scrollPercent >= 50 && !enviado50){
-              enviarDados([{percentage: scrollPercent}]);
+              atualizarDados([{percentage: scrollPercent}]);
                 // window.removeEventListener("scroll", monitorarRolagem);
                 enviado50 = true;
               } else if(scrollPercent >= 75 && !enviado75){
-                enviarDados([{percentage: scrollPercent}]);
+                atualizarDados([{percentage: scrollPercent}]);
                   // window.removeEventListener("scroll", monitorarRolagem);
                   enviado75 = true;
               }
         }
-
         // Adicionar o evento de rolagem ao carregar a página
         window.addEventListener("scroll", monitorarRolagem);
 
