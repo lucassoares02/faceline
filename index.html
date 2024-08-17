@@ -1415,15 +1415,16 @@
 
             // Verificar se o usuário rolou 25% ou mais
             if (scrollPercent >= 25 && !enviado25) {
-              atualizarDados([{percentage: scrollPercent}]);
+              atualizarDados({data: {percentage: scrollPercent}});
                 // window.removeEventListener("scroll", monitorarRolagem);
                 enviado25 = true;
               } else if(scrollPercent >= 50 && !enviado50){
-              atualizarDados([{percentage: scrollPercent}]);
+              atualizarDados({data: {percentage: scrollPercent}});
+
                 // window.removeEventListener("scroll", monitorarRolagem);
                 enviado50 = true;
               } else if(scrollPercent >= 75 && !enviado75){
-                atualizarDados([{percentage: scrollPercent}]);
+                atualizarDados({data: {percentage: scrollPercent}});
                   // window.removeEventListener("scroll", monitorarRolagem);
                   enviado75 = true;
               }
